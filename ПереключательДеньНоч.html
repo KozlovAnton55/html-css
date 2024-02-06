@@ -1,0 +1,43 @@
+
+ПЕРЕКЛЮЧАТЕЛЬ САЙТА ДЕНЬ НОЧ
+
+КОД HTML
+
+ЗАРАНЕЕ СКАЧЕВАЕТСЯ ПОДХОДЯЩЕЕ ИЗОБРАЖЕНИЕ ИКОНКИ ПЕРЕКЛЮЧАТЕЛЯ РЕЖИМА
+
+<img
+    src="images/switch2.svg"     ЗДЕСЬ УКАЗЫВАЕТСЯ ОТНОСИТ ССЫЛКА НА ИКОНКУ ПЕРЕКЛЮЧАТЕЛЯ 
+    id="switch"
+    alt="light switch"
+    class="light"
+/>
+
+КОД CSS 
+
+
+
+body.black {
+    background-color: black;                 ЦВЕТ РЕЖИМА 
+    color: white;                УКАЗЫВАЕТСЯ ЦВЕТ ТЕКСТА
+}
+
+#switch {
+    width: 50px;            /* Устанавливает ширину в 50 пикселей (подставьте нужное значение) */
+    height: auto;          /* Автоматически рассчитывает высоту, сохраняя пропорции */
+}
+
+КОД JS
+
+
+
+const onoff = document.getElementById('switch');
+onoff.addEventListener('click', function () {
+    document.body.classList.toggle('black');
+});
+
+
+ЭТОТ ПИШЕТСЯ В ФАЙЛ С РАСШИРЕНИЕМ JS И УЖЕ ФАЙЛ ПОДКЛЮЧАЕТСЯ В HTML В ОБЛОСТЬ BODY В САМЫЙ КОНЕЦ !!!!!!
+
+КОМАНДА ДЛЯ ПОДКЛЮЧЕНИЯ JS ФАЙЛА 
+
+<script src="script.js"></script>    В SRC УКАЗЫВАЕТСЯ ОТНОСИТ ССЫЛКА НА ФАЙЛ JS

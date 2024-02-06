@@ -1,0 +1,23 @@
+СТРОКА С ПУНКТАМИ ДЛЯ ВЫБОРА НУЖНОГО
+
+КОД HTML
+
+<label for="НАЗВАНИЕ АНГЛ">НАЗВАНИЕ ПОИСКОВОЙ СТРОКИ:</label>
+<select id="НАЗВАНИЕ АНГЛ" name="НАЗВАНИЕ АНГЛ">
+  <option value="ПЕРЕВОД НА АНГЛ">ПУНКТ1</option>
+  <option value="ПЕРЕВОД НА АНГЛ">ПУНКТ2</option>
+  <option value="ПЕРЕВОД НА АНГЛ">ПУНКТ3</option>
+  <option value="ПЕРЕВОД НА АНГЛ">ПУНКТ4</option>
+</select>
+
+
+КОД JS
+
+<script>
+    document.getElementById('НАЗВАНИЕ ИЗ SELECT').addEventListener('change', function() {
+      var selectedЗНАЧЕНИЕ ИЗ SELECT = this.value;
+      if (selectedЗНАЧЕНИЕ ИЗ SELECT) {
+        window.location.href = selectedCar + ".html";
+      }
+    });
+  </script>
