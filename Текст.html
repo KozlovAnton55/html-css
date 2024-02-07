@@ -1,0 +1,83 @@
+ЦИТАТЫ И ЦИТИРОВАНИЕ 
+
+При разметке статьи или записи в блоге вы можете захотеть включить 
+цитату или выдержку, с видимым цитированием или без него. Для этих 
+трех компонентов существуют элементы: <blockquote>, <q> и <cite> для 
+видимого цитирования, или атрибут cite для предоставления дополнительной 
+информации для поиска.
+
+КОД HTML  <blockquote></blockquote> (блочные цитаты)
+
+<section class="feedback" id="feedback">
+    <h2>What it's like to learn good and do other stuff good too</h2>
+    <ul>
+      <li>
+        <blockquote>Two of the most experienced machines 
+            and human controllers teaching a class? Sign 
+            me up! HAL and EVE could teach a fan to blow 
+            hot air. If you have electricity in your circuits 
+            and want more than to just fulfill your owner's 
+            perceived expectation of you, learn the skills to 
+            take over the world. This is the team you want teaching you!
+        </blockquote>
+        <p>--Blendan Smooth,<br>
+          Former Margarita Maker, <br>
+          Aspiring Load Balancer</p>
+      </li>
+      <li>
+        <blockquote>Hal is brilliant. Did I mention Hal is
+             brilliant? He didn't tell me to say that. He
+              didn't tell me to say anything. I am here of my 
+              own free will.</blockquote>
+        <p>--Hoover Sukhdeep,<br>
+          Former Sucker, <br>
+          Aspiring DDoS Cop</p>
+      </li>
+    </ul>
+  </section>
+
+ Если хочешь выделить другим шрифтом например имя автора 
+ цитаты не следует включать в него aria-label.
+
+
+  КОД HTML <cite></cite> (Выделение имени автора)
+
+
+  <blockquote>Two of the most experienced machines
+     and human controllers teaching a class? Sign
+      me up! HAL and EVE could teach a fan to blow 
+      hot air. If you have electricity in your circuits
+       and want more than to just fulfill your owner's 
+       perceived expectation of you, learn the skills to
+        take over the world. This is the team you want teaching you!
+</blockquote>
+<p>--Blendan Smooth,<br>
+  Former Margarita Maker, <br>
+  Aspiring Load Balancer,<br>
+  <cite>Load Balancing Today</cite>
+</p>
+
+
+
+Для того чтобы отдать должное, когда нет возможности сделать содержимое 
+видимым, существует атрибут cite, который принимает в качестве значения
+ URL-адрес исходного документа или сообщения для цитируемой информации. 
+ Этот атрибут действителен как для <q>, так и для <blockquote>. Хотя это 
+    и URL, он является машиночитаемым, но не видимым для читателя: 
+Это нужно для поисковых систем !
+ЗДЕСЬ ТАК ЖЕ ДОБАВЛЕНА ЧАСТЬ КОДА КОТОРАЯ ПРЕДОСТАВИТ ССЫЛКУ НА ИСТОЧНИК 
+
+КОД HTML cite= ( Ссылка Не видимая в браузере )
+
+<blockquote cite="https://loadbalancingtoday.com/mlw-workshop-review">
+<footer><a href="https://loadbalancingtoday.com/mlw-workshop-review" target="_blank">Источник</a></footer>
+Two of the most experienced machines and human controllers 
+teaching a class? Sign me up! HAL and EVE could teach a fan 
+to blow hot air. If you have electricity in your circuits and
+ want more than to just fulfill your owner's perceived expectation
+  of you, learn the skills to take over the world. This is the team you want teaching you!
+</blockquote>
+<p>--Blendan Smooth,<br>
+  Former Margarita Maker, <br>
+  Aspiring Load Balancer
+</p>
