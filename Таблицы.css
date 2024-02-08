@@ -1,0 +1,75 @@
+
+
+КОД ДЛЯ АДАПТАЦИИ ТАБЛИЦЫ К РАЗНЫМ ЭКРАНАМ 
+
+/* Стили для большой таблицы */
+.bigTable {
+    width: 100%; /* Ширина таблицы равна 100% от ширины родительского контейнера */
+    table-layout: fixed; /* Фиксированный размер столбцов */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+  }
+  
+  .bigTable th, .bigTable td {
+    padding: 8px; /* Отступы внутри ячеек */
+    border: 1px solid #ccc; /* Границы для ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  
+  /* Установка фиксированных ширин столбцов */
+  .bigTable th:nth-child(1),
+  .bigTable td:nth-child(1) {
+    width: 150px;
+  }
+  
+  .bigTable th:nth-child(2),
+  .bigTable td:nth-child(2) {
+    width: 200px;
+  }
+  
+  .bigTable th:nth-child(3),
+  .bigTable td:nth-child(3) {
+    width: 180px;
+  }
+  
+  .bigTable th:nth-child(4),
+  .bigTable td:nth-child(4) {
+    width: 220px;
+  }
+  
+  .bigTable th:nth-child(5),
+  .bigTable td:nth-child(5) {
+    width: 160px;
+  }
+  
+  /* Медиа-запрос для адаптивного поведения на маленьких экранах */
+  @media screen and (max-width: 600px) {
+    .bigTable th, .bigTable td {
+      font-size: 12px; /* Уменьшаем размер шрифта на маленьких экранах */
+      padding: 6px; /* Уменьшаем отступы внутри ячеек на маленьких экранах */
+    }
+  
+    .bigTable th:nth-child(1),
+    .bigTable td:nth-child(1),
+    .bigTable th:nth-child(2),
+    .bigTable td:nth-child(2),
+    .bigTable th:nth-child(3),
+    .bigTable td:nth-child(3),
+    .bigTable th:nth-child(4),
+    .bigTable td:nth-child(4),
+    .bigTable th:nth-child(5),
+    .bigTable td:nth-child(5) {
+      width: auto; /* Автоматический размер столбцов на маленьких экранах */
+    }
+  }
+
+
+
+КОД ДЛЯ СТИЛИЗАЦИИ ТАБЛИЦ
+
+#myTable colgroup {
+    background-color: lightgray;
+  }
+  
+#myTable col {
+    width: 100px;
+  }
