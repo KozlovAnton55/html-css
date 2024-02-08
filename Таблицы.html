@@ -1,0 +1,125 @@
+
+
+Содержимое таблиц состоит максимум из трех секций: 
+заголовок таблицы (<thead>), 
+тела таблицы (<tbody>)
+и нижних колонтитулов таблицы (<tfoot>).
+
+ КОД HTML 
+ 
+ 
+ 
+<table>
+    <caption>НАЗВАНИЕ ТАБЛИЦЫ</caption>
+    <thead>
+        <tr>
+            <th>ЗАГОЛОВОК 1 УРОВНЯ</th>
+            <th>ЗАГОЛОВОК 1 УРОВНЯ</th>
+            <th>ЗАГОЛОВОК 1 УРОВНЯ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ДАННЫЕ</td>
+            <td>ДАННЫЕ</td>
+            <td>ДАННЫЕ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>ДАННЫЕ</td>
+            <td>ДАННЫЕ</td>
+            <td>ДАННЫЕ</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+tr- cСТРОКА ТАБЛИЦЫ
+
+th- ЗАГОЛОВОК 1 УРОВНЯ
+
+td- ДАННЫЕ ВНОСИМЫЕ В ТАБЛИЦУ
+
+ОБЪЕДЕНЕНИЕ ЯЧЕЕК В ТАБЛИЦЕ 
+
+rowspan="2". Это объединяет ячейку с ячейкой в соседней строке, расположенной непосредственно под ней.
+
+colspan="2" указывает, что ячейка должна распространяться на два столбца. 
+
+scope="col" указывает, что этот заголовок относится к столбцу
+
+id="имя заголовка" дает ячейке уникальный идентификатор, который может использоваться для ссылок или стилей.
+
+
+
+<table>
+    <caption>MLW Alumni</caption>
+    <thead>
+      <tr>
+        <th rowspan="2" id="name" scope="col">Name</th>
+        <th colspan="2" id="path">Career path</th>
+        <th rowspan="2" id="year">Year</th>
+      </tr>
+      <tr>
+        <th id="past" scope="col">Past</th>
+        <th id="future" scope="col">Destiny</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th id="hal" scope="row">Hal Gibrah</th>
+        <td headers="hal path past">Calculator</td>
+        <td headers="hal path future">Mars rover</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <th id="cathy" scope="row">Cathy Terr</th>
+        <td headers="cathy path past">Waste disposal</td>
+        <td headers="cathy path future">Automated teller</td>
+        <td>2018</td>
+      </tr>
+      <tr>
+        <th id="lou" scope="row">Lou Minious</th>
+        <td headers="lou path past">Lightbulb</td>
+        <td headers="lou path future">Smart bulb</td>
+        <td>1956</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  ПРИМЕНЕНИЕ СТИЛЕЙ ДЛЯ ТАБЛИЦ С CSS НА ТОТ СЛУЧАЙ ЕСЛИ ОДНА ТАБЛИЦА НА САЙТЕ ТО 
+  ИСПОЛЬЗУЕТСЯ ПРОСТО ID 
+
+  <table id="myTable">
+    <!-- Содержимое таблицы -->
+  </table>
+  
+
+  НА СЛУЧАЙ ЕСЛИ ИСПОЛЬЗУЕТСЯ НЕСКОЛЬКО ТАБЛИЦ НА САЙТЕ ТО class
+
+
+  <table class="myTable">
+    <!-- Содержимое первой таблицы -->
+  </table>
+  
+  <table class="myTable1">
+    <!-- Содержимое второй таблицы -->
+  </table>
+  
+  <table class="myTable2">
+    <!-- Содержимое третьей таблицы -->
+  </table>
+
+  ДЛЯ ПРИВЯЗКИ ТАБЛИЦЫ К ЯКОРНОЙ ССЫЛКЕ В СЛУЧАЕ ЕСЛИ НА САЙТЕ НЕСКОЛЬКО ТАБЛИЦ 
+  ДОБАВЛЯЕТСЯ ID
+
+  <table class="myTable" id="myTable">
+    <!-- Содержимое таблицы -->
+  </table>
+
+  
+   И ЧТО БЫ МОЖНО БЫЛО НА НЕГО СОСЛАТЬСЯ ИСПОЛЬЗУЙ КОД
+
+   <a href="#myTable">Перейти к таблице</a>

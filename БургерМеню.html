@@ -1,0 +1,38 @@
+БУРГЕР МЕНЮ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ
+
+КОД HTML (В ПРИМЕРЕ ИМЕЕТСЯ ДОКУМЕНТ HTML С ПОДКЛЮЧЕННЫМИ ВНЕШНИМИ ФАЙЛАМИ (STYLES.CSS) И (SCRIPT.JS) )
+ИЗМЕНЯТЬ ЗДЕСЬ МОЖНО ТОЛЬКО САМУ ИКОНКУ БУРГЕР МЕНЮ В ТЭГЕ <LABEL>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Чекбокс для переключения меню -->
+    <input type="checkbox" class="menu-toggle" id="menu-toggle">
+    
+    <!-- Лейбл для гамбургер иконки -->
+    <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+    
+    <!-- Меню -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+КОД CSS НАХОДИТСЯ В ФАЙЛЕ CSS 
+КЛД JS НАХОДИТСЯ В ФАЙЛЕ JS

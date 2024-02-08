@@ -1,0 +1,46 @@
+
+
+КОД CSS ДЛЯ БУРГЕР МЕНЮ С МЕДИА ЗАПРОСАМИ 
+
+
+/* Стили для гамбургер меню */
+.menu-toggle {
+    display: none; /* Скрываем чекбокс */
+}
+
+.menu-toggle-label {
+    display: block;
+    font-size: 24px; /* Размер иконки */
+    cursor: pointer;
+}
+
+/* Стили для меню */
+.menu {
+    display: none; /* Начинаем с скрытого меню */
+}
+
+.menu.open {
+    display: block; /* Показываем меню, когда у меню есть класс 'open' */
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .menu {
+        display: none; /* Скрываем меню на маленьких экранах */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Скрываем чекбокс на больших экранах */
+    }
+
+    .menu {
+        display: block; /* Показываем меню на больших экранах */
+    }
+
+    .menu-toggle-label {
+        display: none; /* Скрываем иконку бургер-меню на больших экранах */
+    }
+}
