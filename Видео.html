@@ -1,0 +1,46 @@
+ИСПОЛЬЗОВАНИЕ ВИДЕО НА САЙТЕ 
+
+
+КОД HTML 
+
+
+
+<video 
+controls 
+poster="images/machine.jpg"
+
+>
+
+    <source src="videos/machines.webm" type="video/webm" />
+    <source src="videos/machines.mp4" type="video/mp4" />
+    
+     <p>
+        Watch
+        <a href="https://youtube.com/link"
+            >video on Youtube</a>
+        
+    </p>
+</video>
+
+ЗДЕСЬ <video>ОБОЛОЧКА</video> В sourse УКАЗЫВАЕТСЯ ССЫЛКА НА ВИДЕО ИЛИ НАХОДЯЩЕГОСЯ В ПРОЕКТЕ 
+ИЛИ НА ХОСТИНГЕ УКАЗАННО ДВА sourse ЭТО ВИДЕО В ДВУХ ФОРМАТАХ ДЛЯ ОПТИМИЗАЦИИ В type УКАЗЫВАЕТСЯ ФОРМАТ И СУТЬ ИСПОЛЬЗУЕМОГО КОНТЕНТА ДАЛЕЕ  
+<P>ПАРАГРАФ</P> В НЕМ <a>ГИПЕРССЫЛКА НА РЕСУРС НА ТОТ СЛУЧАЙ ЕСЛИ ВИДЕО ПО КАКОЙ ТО ПРЕЧИНЕ НЕ ЗАГРУЗИТСЯ</a>
+ДАЛЕЕ href В КОТОРОМ И УКАЗЫВАЕТСЯ ССЫЛКА НА РЕСУРС 
+
+
+МОЖНО ИСПОЛЬЗОВАТЬ СУБТИТРЫ 
+
+    КОД HTML 
+
+
+    <track
+        label="Francais"
+        kind="subtitles"
+        srclang="fr"
+        src="vtt/subtitles-fr.vtt"
+    />
+
+    ДАННЫЙ КОД ПРОПИСЫВАЕТСЯ СРАЗУ ПОСЛЕ <source>
+    ИСПОЛЬЗУЕТСЯ ГОТОВЫЙ ФАЙЛ СУБТИТР В src В 
+    lable УКАЗЫВАЕТСЯ ЯЗЫК В srclang УКАЗЫВАЕТСЯ РЕГИОН ИСПОЛЬЗУЕМОГО ЯЗЫКА 
+    В КАВЫЧКАХ "rus"
