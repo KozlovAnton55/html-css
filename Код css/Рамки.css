@@ -1,0 +1,33 @@
+
+
+Радиус границы¶
+
+Чтобы придать блоку закругленные углы, используйте свойство border-radius.
+
+.my-element {
+	border: 2px solid;
+  border-radius: 1em;
+}
+
+.my-element {
+    width: 250px;
+    height: 250px;
+  }
+
+  Можно также указать радиус каждого угла в сокращенном виде в 
+  следующем порядке: верхний левый, верхний правый, нижний
+   правый, затем нижний левый.
+
+
+   .my-element {
+	border: 2px solid;
+  border-radius: 1em 2em 3em 4em;
+}
+
+
+/* Presentational styles */
+.my-element {
+  width: 250px;
+  height: 250px;
+}
+
