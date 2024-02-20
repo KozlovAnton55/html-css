@@ -1,0 +1,129 @@
+
+
+АНИМАЦИИ
+
+В САМОМ НАЧАЛЕ ОБЪЯВЛЯЮТСЯ ОСНОВНЫЕ ПРАВИЛА CSS КОТОРЫЕ БУДУТ ПРИМЕНЯТЬСЯ К ЭЛЕМЕНТУ 
+АНИМАЦИИ ДАЛЕЕ ОБЪЯВЛЯЕТСЯ ПРАВИЛО АНИМАЦИИ @keyframes В ДАННОМ ПРИМЕРЕ ИСПОЛЬЗУЕТСЯ 
+БЕЛЫЙ КРУГ
+
+.pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    posiyion: relative;
+    left: 0;
+}
+
+@keyframes ПРАВИЛО АНИМАЦИИ ОБЪЯВЛЯЕТСЯ КАК ФУНКЦИЯ КОТОРОЙ ПРИСВАЕВАЕТСЯ ИМЯ КОТОРОЕ ПОТОМ И 
+ИСПОЛЬЗУЕТСЯ В CSS НАПРИМЕР PULSE
+
+@keyframes pulse {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 500px;  
+    }
+}
+
+animation-name: С ПОМОЩЬЮ ЭТОЙ КОМАНДЫ ИДЕТ ПРИВЯЗКА ОСНОВНЫХ СВОЙСТВ CSS ОПРЕДЕЛЯЮЩИХ
+СТИЛИ БЕЛОГО КРУГА К КЛЮЧЕВЫМ КАДРАМ @keyframes animation-name ОБЪЯВЛЯЕТСЯ В ЭТИХ ЖЕ 
+СТИЛЯХ БЕЛОГО КРУГА  
+
+animation-duration: ЭТО СВОЙСТВО ОТВЕЧАЕТ ЗА ВРЕМЯ С КОТОРЫМ БУДЕТ ДЛИТЬСЯ АНИМАЦИЯ
+ВРЕМЯ МОЖНО УКЗЫВАТЬ В (S) ИЛИ В (MS)
+
+animation-timing-function: ПРЕДНАЗНАЧЕНА ДЛЯ ВОССОЗДАНИЯ ЕСТЕСТВЕННОГО ДВИЖЕНИЯ 
+АНИМАЦИИ К ПРЕМЕНЕНИЮ ИМЕЕТ 5 СВОЙСТВ (linear, ease, ease-in, ease-out, ease-in-out)
+
+animation-iteration-count: ЭТО СВОЙСТВО ПОЗВОЛЯЕТ УКАЗЫВАТЬ КОЛИЧЕСТВО ИТЕРАЦИЙ ДЛЯ 
+АНИМАЦИИ ТАК ЖЕ МОЖНО УКАЗАТЬ БЕСКОНЕЧНОЕ КОЛЛИЧЕТВО (infinite)
+
+animation-direction: ЗАДАЕТ НАПРАВЛЕНИЕ И СПОСОБ ПРОИГРЫВАНИЯ АНИМАЦИИ
+ТАК ЖЕ ИМЕЕТ ЗНАЧЕНИЯ (normal, alternate, alternate-reverse, reverse)
+
+animation-fill-mode:  СПОМОЩЬЮ ЭТОГО СВОЙСТВА МОЖНО СДЕЛАТЬ ЧТО БЫ АНЕМАЦИЯ 
+1 (none) ЗНАЧЕНИЯ НЕ МЕНЯЮТСЯ НЕ ОТМЕНЯЯ ВСЕ ПРЕД ИДУЩИЕ ПРАВИЛА
+2 (forwards) НЕ БУДЕТ РАБОТАТЬ ПРИ БЕСКОНЕЧНОМ ПРОИГРОВАНИИ АНИМАЦИИ
+ЕСЛИ ПОМЕНЯТЬ ЗНАЧЕНИЕ (infinite) НА 1 ТО ЭТО ЗНАЧЕНИЕ ПОМЕНЯЕТ 
+РАБОТУ АНИМАЦИИ ОНА БУДЕТ ВЫЕЗЖАТЬ С ЛЕВА НА 500px В ПРАВО И ТАМ ОСТАВАТЬСЯ 
+
+ТАК ЖЕ МОЖНО В @keyframes ДОБАВЛЯТЬ ПРОМЕЖУТОЧНОЕ СОСТОЯНИЕ НЕ ТОЛЬКО НАЧАЛО
+И КОНЕЦ А ЕЩЕ ЦЕНТР И ТЕПЕРЬ КРУГ БУДЕТ МЕНЯТЬ СВОИ СОСТОЯНИЯ ТРИ РАЗА К 
+ПРИМЕРУ МОЖНО СДЕЛАТЬ ТАК ЧТО КРУГ К СЕРЕДИНЕ ИТЕРАЦИИ БУДЕТ СТАНОВИТЬСЯ КВАДРАТОМ А 
+К КОНЦУ ОПЯТЬ КРУГОМ ДОБАВИВ ЕЩЕ ОДИН КЛЮЧЕВОЙ КАДР 50% { border-radius: 0%;}
+
+
+
+
+
+.pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    posiyion: relative;
+    left: 0;
+
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes pulse {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 500px;  
+    }
+}
+
+
+
+animation: С ПОМОЩЬЮ ЭТОГО СВОЙСТВА МОЖНО КРАТКО ЗАПИСЫВАТЬ ВСЕ ЭТИ ПРАВИЛА НО 
+УЖЕ БЕЗ ПРЕД ИДУЩИХ СВОЙСТВ УКАЗЫВАЯ ТОЛЬКО ИХ ЗНАЧЕНИЯ 
+
+.pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    posiyion: relative;
+    left: 0;
+
+    animation:  pulse 2s linear infinite alternate;
+
+}
+
+@keyframes pulse {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 500px;  
+    }
+}
+
+ТАК ЖЕ К ОДНОМУ И ТОМУ ЖЕ ЭЛЕМЕНТУ БЕЛОМУ КРУГУ МОЖНО ПРЕМЕНИТЬ ЕЩЕ ОДНИ КЛЮЧЕВЫЕ КАДРЫ 
+НО УЖЕ С ЦВЕТАМИ И НАЗВАТЬ ИХ red-pulse УКАЗАВ В НИХ ИЗМЕНЕНИЕ ЦВЕТА 
+
+@keyframes red-pulse  {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: red;  
+    }
+}
+
+ТЕПЕРЬ У МЕНЯ ДВА КЛЮЧЕВЫХ КАДРА ИХ МОЖНО ПРЕМЕНИТЬ СРАЗУ ОБА К ОДНОМУ ЭЛЕМЕНТУ ЧЕРЕЗ
+ЗАПЯТУЮ ПРЕМЕНИТЬ ВСЕ ТЕЖИПРАВИЛА В animation: УКАЗАВ ИМЯ НОВОГО КЛЮЧЕВОГО ПРАВИЛА
+
+animation:  pulse 2s linear infinite alternate, red-pulse 2s linear infinite alternate;
+
+
